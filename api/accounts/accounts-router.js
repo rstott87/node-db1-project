@@ -19,12 +19,7 @@ router.get('/', async (req, res, next) => {
 // }); 
   
 router.get('/:id', md.checkAccountId, async (req, res, next) => {
-  try {
-    const accounts = await Account.getById(req.params.id)
-    res.json(accounts)
-  } catch (err) {
-    next (err)
-  }
+res.json(req.account)  //note: simplified from earlier since most is done in middleware.js 
  });
 
 router.post('/',
