@@ -1,7 +1,10 @@
+const db = require(`../../data/db-config`)
+
 const getAll = () => {
   // DO YOUR MAGIC
+  db('users');
 }
-
+console.log("hey");
 const getById = id => {
   // DO YOUR MAGIC
 }
