@@ -4,7 +4,7 @@ const getAll = () => {
   // DO YOUR MAGIC
   return db('accounts'); // question - why a string?
 }
-console.log("hey");
+
 const getById = id => {
   // DO YOUR MAGIC
   // select * from accounts where id = 1;

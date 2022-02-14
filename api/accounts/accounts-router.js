@@ -22,11 +22,12 @@ router.get('/:id', md.checkAccountId, async (req, res, next) => {
 res.json(req.account)  //note: simplified from earlier since most is done in middleware.js 
  });
 
-router.post('/',
-md.checkAccountPayload,
-md.checkAccountNameUnique,
- (req, res, next) => {
-  try {
+router.post(
+  '/',
+  md.checkAccountPayload,
+  md.checkAccountNameUnique,
+  (req, res, next) => {
+   try {
     res.json('post account!')
   } catch (err) {
     next (err)
